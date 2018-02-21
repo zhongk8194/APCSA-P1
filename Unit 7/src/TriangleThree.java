@@ -29,19 +29,34 @@ public class TriangleThree
 		letter = let;
 	}
 
-	public String getLetter()
+	/**public String getLetter()
 	{
+	String output = " ";
 		for (int outer = 1; outer <= size; outer ++)
 		{
-			for (int inner = 1; inner <=outer; inner++)
-				System.out.println(letter);
+			for (int inner = 1; inner <=outer; inner++){
+				output = output + " ";
+			}
+			for (int i = 1; i <= outer; i++){
+				output = output + letter;
+			}
 		}
-		return "";
-	}
+		return output;**/
 
 	public String toString()
 	{
-		String output="";
-		return output+"\n";
+		String output = "";
+		for (int outer = 0; outer < size; outer ++)
+		{
+			for (int inner = size; inner >=outer; inner--){
+				output = output + " ";
+			}
+			for (int i = 0; i <= outer; i++){
+				output = output + letter;
+			}
+			output = output + "\n";
+		}
+		return output;
+		
 	}
 }
