@@ -1,4 +1,4 @@
-//© A+ Computer Science  -  www.apluscompsci.com
+//Â© A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class -
@@ -10,7 +10,7 @@ import static java.lang.System.*;
 public class GuessingGame
 {
 	private int upperBound;
-	private int randomNum;
+	private int randomNum, guess, guesses = 0, wrongAns = 0, percent;
 
 	public GuessingGame(int stop)
 	{
@@ -21,25 +21,20 @@ public class GuessingGame
 	public void playGame()
 	{
 		Scanner keyboard = new Scanner(System.in);
-		int guess;
-		int guesses = 1;
-		System.out.println("Enter a number between 1 and " + upperBound);
-		guess = keyboard.nextInt();
-
-		while (guess != randomNum){
-			System.out.println("Enter a number between 1 and " + upperBound);
-			guesses = guesses + 1;
-			guess = keyboard.nextInt();
-			}
 		
-		double percent = ((guesses - 1)/ guesses) * 100;
-		System.out.println("It took " + guesses + " guesses to guess " + randomNum);
-		System.out.println("You guessed wrong " + percent + " percent of the time.");
+		do{
+			System.out.println("Enter a number between 1 and " + upperBound);
+			guess = keyboard.nextInt();
+			guesses ++;
+			if (guess != randomNum)
+				wrongAns++;
+		} while (guess != randomNum);
+		
 	}
 	
 	public String toString()
 	{
-		String output="";
+		String output= "It took " + guesses + " guesses to guess " + randomNum + "/nYou guessed right " + 100/guesses + " percent of the time. \n\n";
 		return output;
 	}
 }
