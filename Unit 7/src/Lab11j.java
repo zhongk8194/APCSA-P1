@@ -1,4 +1,4 @@
-//© A+ Computer Science  -  www.apluscompsci.com
+//Â© A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class - 
@@ -12,7 +12,7 @@ public class Lab11j
    {
 	   Triples one = new Triples();
 	   one.setNum(110);
-	   out.println(one);
+	   out.println(one.toString());
 
 	}
 }
