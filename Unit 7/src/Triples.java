@@ -1,4 +1,4 @@
-//© A+ Computer Science  -  www.apluscompsci.com
+//Â© A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class - 
@@ -47,53 +47,35 @@ public class Triples
 			}
 		}
 		return output;
-	}
+	}**/
 	
 	private int greatestCommonFactor(int a, int b, int c)
 	{
-		limit
-		int max = 0;
-		
+		int max = -1;
+		for (int i = 2; i <= a; i++)
+		{
+			if (a % i == 0 && b % i == 0 && c % i == 0)
+				return 0
+		}
 
 		return 1;
-	}**/
+	}
 
 	public String toString()
 	{
-		int a = 0;
-		int b = 0;
-		int c = 0;
 		String output = "";
-		for (a = 1; a <= number; a++)
+		for (int i = 1; i <= number; i++)
 		{
-			int aa = a * a;
-			b = a + 1;
-			c = b + 1;
-			while (c <= number){
-				int cc = aa + b*b;
-				while (c*c < cc) {c++;}
+			for (int j = i + 1; j <= number; j++)
+			{
+				for (int k = j + 1; k <= number; k++)
 				{
-					if (c*c == cc && c <= number)
-					{
-						int limit = Math.min(a, b);
-					    limit = Math.min(limit, c);
-					    for(int n = limit; n >= 2; n--)
-					    {
-					        if ( (a % n == 0) && (b % n == 0) && (c % n == 0) ) {
-					            if (n > 1)
-					            	output = output;
-					            else
-					            	output = output + a + " " + b + " " + c + "\n";
-					        }
-					    }
-						/**if (a % 2 == 0 && b % 2 == 0 && c % 2 == 0)
-							output = output;
-						else if (a % 3 == 0 && b % 3 == 0 && c % 3 == 0)
-							output = output;
-						else
-							output = output + a + " " + b + " " + c + "\n";**/
+					if ((i * i) + (j* j) = (k * k)) && ((i % 2 == 1 && j % 2 == 0 && k % 2 == 1) || (i % 2 == 0 && j % 2 == 1 && k % 2 == 1)) && (greatestCommonFactor(i, j, k) == 1))
+						output += i + " " + j + " " + k + "\n";
+				}
+		    
 					}
-					b++;
+					
 				}
 			}
 		}
