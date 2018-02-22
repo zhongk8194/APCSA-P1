@@ -1,4 +1,4 @@
-//© A+ Computer Science  -  www.apluscompsci.com
+//Â© A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class -
@@ -12,29 +12,15 @@ public class Lab10e
 	public static void main(String args[])
 	{
 		Scanner keyboard = new Scanner(System.in);
-		out.print("Guessing Game - how many numbers? ");
-		int num = keyboard.nextInt();
-		GuessingGame one = new GuessingGame(num);
-		one.playGame();
+		char response = 'y';
 		
-		
-		/**out.print("Enter a number between 1 and " + num);
-		int guess1 = keyboard.nextInt();
-		int guesses = 0;
-		while (guess1 != num)
+		while (response == 'y')
 		{
-			out.print("Enter a number between 1 and " + num);
-			int guess = keyboard.nextInt();
-			guesses += 1;
+			System.out.print("Guessing Game - how many numbers? ");
+			GuessingGame one = new GuessingGame(keyboard.nextInt());
+			one.playGame();
+			System.out.println(one.toString() + "/n")
 		}
-		out.println ("It took " + guesses + "guesses to guess " + num);
-		out.println("You guessed wrong " + (guesses - 1)/ guesses + " percent of the time.");
-	
-		char response;
-**/
-
-
-
 
 	}
 }
